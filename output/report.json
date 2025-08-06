@@ -1,0 +1,52 @@
+{
+    "target": "https://tjtc.edu.cn/",
+    "host": "tjtc.edu.cn",
+    "directories": [],
+    "open_ports": [
+        80,
+        443
+    ],
+    "sql_vulnerable": {
+        "vulnerable": false,
+        "matched_keywords": [],
+        "matched_patterns": []
+    },
+    "xss_vulnerable": {
+        "vulnerable": true,
+        "details": {
+            "https://tjtc.edu.cn/?xss=%3Cscript%3Ealert%281%29%3C/script%3E": {
+                "payload": "<script>alert(1)</script>",
+                "type": "pattern",
+                "confidence": "low"
+            },
+            "https://tjtc.edu.cn/?xss=%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E": {
+                "payload": "<img src=x onerror=alert(1)>",
+                "type": "pattern",
+                "confidence": "low"
+            },
+            "https://tjtc.edu.cn/?xss=%22%3E%3Cscript%3Ealert%281%29%3C/script%3E": {
+                "payload": "\"><script>alert(1)</script>",
+                "type": "pattern",
+                "confidence": "low"
+            },
+            "https://tjtc.edu.cn/?xss=%23javascript%3Aalert%281%29": {
+                "payload": "#javascript:alert(1)",
+                "type": "pattern",
+                "confidence": "low"
+            },
+            "https://tjtc.edu.cn/?xss=%253Cscript%253Ealert%281%29%253C/script%253E": {
+                "payload": "%3Cscript%3Ealert(1)%3C/script%3E",
+                "type": "pattern",
+                "confidence": "low"
+            }
+        },
+        "tested_urls": [
+            "https://tjtc.edu.cn/?xss=%3Cscript%3Ealert%281%29%3C/script%3E",
+            "https://tjtc.edu.cn/?xss=%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E",
+            "https://tjtc.edu.cn/?xss=%22%3E%3Cscript%3Ealert%281%29%3C/script%3E",
+            "https://tjtc.edu.cn/?xss=%23javascript%3Aalert%281%29",
+            "https://tjtc.edu.cn/?xss=%253Cscript%253Ealert%281%29%253C/script%253E"
+        ]
+    },
+    "scan_time": "2025-06-17 17:07:26"
+}
