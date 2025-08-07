@@ -80,7 +80,6 @@ scanner-tool/
     ├── sqlcheck.py
     └── xsscheck.py
 ```
-🤝 作者信息
-👤 GitHub: @mimishiyigemimi
+
 
 📧 欢迎交流学习，建议与改进请提交 Issue 或 PR！
