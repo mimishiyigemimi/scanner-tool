@@ -34,26 +34,23 @@
 ```bash
 git clone https://github.com/mimishiyigemimi/scanner-tool.git
 cd scanner-tool
+```
 安装依赖：
 
-bash
-复制
-编辑
+```bash
 pip install -r requirements.txt
+```
 🛠️ 使用方法
 运行扫描器：
 
-bash
-复制
-编辑
+```bash
 python scanner.py <目标网址>
 ⚠️ 建议输入完整 URL，包括协议（http:// 或 https://）
-
+```
 示例：
-bash
-复制
-编辑
+```bash
 python scanner.py https://www.example.com
+```
 📁 输出说明
 扫描完成后，结果将保存在 output/ 目录下：
 
@@ -69,9 +66,7 @@ XSS/SQL 检测为基础模式匹配，建议结合手动验证使用
 后期可扩展支持验证码识别、Cookie 注入、爬虫模块等功能
 
 📚 项目结构简述
-bash
-复制
-编辑
+```bash
 scanner-tool/
 │
 ├── scanner.py                # 主调度文件
@@ -84,6 +79,7 @@ scanner-tool/
     ├── portscan.py
     ├── sqlcheck.py
     └── xsscheck.py
+```
 🤝 作者信息
 👤 GitHub: @mimishiyigemimi
 
