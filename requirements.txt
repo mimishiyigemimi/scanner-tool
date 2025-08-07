@@ -119,3 +119,4 @@ widgetsnbextension==4.0.13
 XlsxWriter==3.2.0
 yagooglesearch==1.10.0
 yt-dlp==2025.3.31
+chardet
